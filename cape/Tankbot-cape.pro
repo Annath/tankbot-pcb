@@ -1,4 +1,4 @@
-update=12/19/2020 8:07:40 PM
+update=12/23/2020 8:10:17 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -236,7 +236,7 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=C:/Users/nmill/Downloads/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew

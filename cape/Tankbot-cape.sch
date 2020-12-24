@@ -267,7 +267,7 @@ L Connector_Generic:Conn_02x05_Odd_Even J1
 U 1 1 5FB695C7
 P 9000 1500
 F 0 "J1" H 9050 1917 50  0000 C CNN
-F 1 "MOTOR_RIBBON" H 9050 1826 50  0000 C CNN
+F 1 "Motor Ribbon" H 9050 1826 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 9000 1500 50  0001 C CNN
 F 3 "~" H 9000 1500 50  0001 C CNN
 	1    9000 1500
@@ -382,7 +382,7 @@ U 1 1 5FBBAADD
 P 6800 2700
 F 0 "J2" H 6880 2692 50  0000 L CNN
 F 1 "Battery" H 6880 2601 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6800 2700 50  0001 C CNN
+F 2 "Connector_AMASS:AMASS_XT30U-M_1x02_P5.0mm_Vertical" H 6800 2700 50  0001 C CNN
 F 3 "~" H 6800 2700 50  0001 C CNN
 	1    6800 2700
 	-1   0    0    1   
@@ -406,10 +406,6 @@ Wire Wire Line
 	8650 3000 9900 3000
 Wire Wire Line
 	8650 3000 8650 2400
-Wire Wire Line
-	9750 2600 9900 2600
-Text GLabel 9750 2600 0    50   Input ~ 0
-REGULATOR_ENABLE
 Wire Wire Line
 	9450 2900 9450 2800
 Connection ~ 9450 2900
@@ -458,13 +454,11 @@ U 1 1 5FBC28B5
 P 10100 2800
 F 0 "J3" H 10180 2842 50  0000 L CNN
 F 1 "Regulator connector" H 10180 2751 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 10100 2800 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 10100 2800 50  0001 C CNN
 F 3 "~" H 10100 2800 50  0001 C CNN
 	1    10100 2800
 	1    0    0    -1  
 $EndComp
-Text GLabel 9750 3850 2    50   Input ~ 0
-REGULATOR_ENABLE
 $Comp
 L power:GNDD #PWR0110
 U 1 1 5FC0F261
@@ -475,17 +469,6 @@ F 2 "" H 7150 2800 60  0000 C CNN
 F 3 "" H 7150 2800 60  0000 C CNN
 	1    7150 2800
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x03 J4
-U 1 1 5FC1AA82
-P 9400 3850
-F 0 "J4" H 9480 3892 50  0000 L CNN
-F 1 "JUMP TO DISABLE REGULATOR" H 9480 3801 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9400 3850 50  0001 C CNN
-F 3 "~" H 9400 3850 50  0001 C CNN
-	1    9400 3850
-	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	4500 1650 4900 1650
@@ -503,23 +486,6 @@ Wire Wire Line
 	9800 1600 9300 1600
 Wire Wire Line
 	9300 1700 9800 1700
-$Comp
-L power:GNDD #PWR0109
-U 1 1 5FBD4383
-P 9750 4050
-F 0 "#PWR0109" H 9750 3800 50  0001 C CNN
-F 1 "GNDD" H 9750 3900 50  0000 C CNN
-F 2 "" H 9750 4050 60  0000 C CNN
-F 3 "" H 9750 4050 60  0000 C CNN
-	1    9750 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9600 3950 9750 3950
-Wire Wire Line
-	9750 3950 9750 4050
-Wire Wire Line
-	9750 3850 9600 3850
 $Comp
 L Device:CP_Small C1
 U 1 1 5FC30039
