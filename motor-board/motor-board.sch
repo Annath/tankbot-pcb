@@ -1,0 +1,481 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Tankbot Motor Controller"
+Date "2020-12-24"
+Rev "A"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x08 J1
+U 1 1 5FE542FC
+P 2700 3500
+F 0 "J1" H 2650 4050 50  0000 L CNN
+F 1 "Motor Driver IN" H 2400 3950 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 2700 3500 50  0001 C CNN
+F 3 "~" H 2700 3500 50  0001 C CNN
+	1    2700 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x08 J2
+U 1 1 5FE548D2
+P 3600 3500
+F 0 "J2" H 3600 4050 50  0000 C CNN
+F 1 "Motor Driver OUT" H 3600 3950 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 3600 3500 50  0001 C CNN
+F 3 "~" H 3600 3500 50  0001 C CNN
+	1    3600 3500
+	-1   0    0    -1  
+$EndComp
+Text GLabel 6600 1600 0    50   Input ~ 0
+MOTOR_PWR_EN
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J4
+U 1 1 5FE5A2AA
+P 3100 1500
+F 0 "J4" H 3150 1917 50  0000 C CNN
+F 1 "Ribbon Connector" H 3150 1826 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 3100 1500 50  0001 C CNN
+F 3 "~" H 3100 1500 50  0001 C CNN
+	1    3100 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 1600 6950 1600
+Wire Wire Line
+	7200 2800 6750 2800
+Wire Wire Line
+	6750 2800 6750 3050
+Wire Wire Line
+	7200 2700 6750 2700
+Wire Wire Line
+	6750 2700 6750 2800
+Connection ~ 6750 2800
+Wire Wire Line
+	7200 2900 6250 2900
+$Comp
+L Connector_Generic:Conn_01x05 J3
+U 1 1 5FE6091B
+P 7400 2700
+F 0 "J3" H 7480 2742 50  0000 L CNN
+F 1 "Regulator" H 7480 2651 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 7400 2700 50  0001 C CNN
+F 3 "~" H 7400 2700 50  0001 C CNN
+	1    7400 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 2500 7200 2500
+Wire Wire Line
+	6950 1600 6950 2500
+Text GLabel 3700 1300 2    50   Output ~ 0
+MOTOR_PWR_EN
+Wire Wire Line
+	3400 1300 3700 1300
+Text GLabel 3700 1400 2    50   Output ~ 0
+MOTOR_nSLEEP
+Text GLabel 3700 1500 2    50   Input ~ 0
+MOTOR_nFAULT
+Text GLabel 3700 1600 2    50   Output ~ 0
+MOTOR_PWM_RIGHT_A
+Text GLabel 3700 1700 2    50   Output ~ 0
+MOTOR_PWM_RIGHT_B
+Wire Wire Line
+	2450 1100 2450 1300
+Wire Wire Line
+	2450 1300 2900 1300
+Text GLabel 2450 1500 0    50   Output ~ 0
+MOTOR_PWM_LEFT_B
+Wire Wire Line
+	3400 1700 3700 1700
+Wire Wire Line
+	3700 1600 3400 1600
+Wire Wire Line
+	3400 1500 3700 1500
+Wire Wire Line
+	3400 1400 3700 1400
+Text GLabel 2450 1400 0    50   Output ~ 0
+MOTOR_PWM_LEFT_A
+Text GLabel 2050 3900 0    50   Output ~ 0
+MOTOR_nFAULT
+Text GLabel 2050 3800 0    50   Input ~ 0
+MOTOR_nSLEEP
+Wire Wire Line
+	2050 3800 2500 3800
+Wire Wire Line
+	2500 3900 2050 3900
+Text GLabel 2050 3700 0    50   Input ~ 0
+MOTOR_PWM_LEFT_A
+Text GLabel 2050 3600 0    50   Input ~ 0
+MOTOR_PWM_LEFT_B
+Text GLabel 2050 3400 0    50   Input ~ 0
+MOTOR_PWM_RIGHT_A
+Text GLabel 2050 3500 0    50   Input ~ 0
+MOTOR_PWM_RIGHT_B
+Wire Wire Line
+	2050 3400 2500 3400
+Wire Wire Line
+	2050 3500 2500 3500
+Wire Wire Line
+	2050 3600 2500 3600
+Wire Wire Line
+	2050 3700 2500 3700
+Wire Wire Line
+	2500 3200 2100 3200
+Wire Wire Line
+	2100 3200 2100 3000
+Wire Wire Line
+	3800 3200 4250 3200
+Wire Wire Line
+	4250 3200 4250 3050
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5FE69896
+P 9700 1750
+F 0 "J5" H 9618 1425 50  0000 C CNN
+F 1 "Battery" H 9618 1516 50  0000 C CNN
+F 2 "Connector_AMASS:AMASS_XT60-F_1x02_P7.20mm_Vertical" H 9700 1750 50  0001 C CNN
+F 3 "~" H 9700 1750 50  0001 C CNN
+	1    9700 1750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9000 1500 9000 1650
+Wire Wire Line
+	9000 1750 9000 1900
+Wire Wire Line
+	3800 3300 4600 3300
+Wire Wire Line
+	4600 3300 4600 3050
+Text GLabel 4250 3600 2    50   Output ~ 0
+MOTOR_OUT_LEFT_A
+Text GLabel 4250 3700 2    50   Output ~ 0
+MOTOR_OUT_LEFT_B
+Text GLabel 4250 3500 2    50   Output ~ 0
+MOTOR_OUT_RIGHT_A
+Text GLabel 4250 3400 2    50   Output ~ 0
+MOTOR_OUT_RIGHT_B
+Wire Wire Line
+	4250 3700 3800 3700
+Wire Wire Line
+	4250 3600 3800 3600
+Wire Wire Line
+	4250 3500 3800 3500
+Wire Wire Line
+	3800 3400 4250 3400
+$Comp
+L power:+5V #PWR04
+U 1 1 5FE70083
+P 4600 3050
+F 0 "#PWR04" H 4600 2900 50  0001 C CNN
+F 1 "+5V" H 4615 3223 50  0000 C CNN
+F 2 "" H 4600 3050 50  0001 C CNN
+F 3 "" H 4600 3050 50  0001 C CNN
+	1    4600 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR010
+U 1 1 5FE78920
+P 9000 2650
+F 0 "#PWR010" H 9000 2500 50  0001 C CNN
+F 1 "+BATT" H 9015 2823 50  0000 C CNN
+F 2 "" H 9000 2650 50  0001 C CNN
+F 3 "" H 9000 2650 50  0001 C CNN
+	1    9000 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 2650 9000 2800
+Wire Wire Line
+	9000 2900 9000 3100
+$Comp
+L Connector_Generic:Conn_01x02 J7
+U 1 1 5FE7B117
+P 9700 3650
+F 0 "J7" H 9780 3642 50  0000 L CNN
+F 1 "Right Motor JST" H 9780 3551 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 9700 3650 50  0001 C CNN
+F 3 "~" H 9700 3650 50  0001 C CNN
+	1    9700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J8
+U 1 1 5FE7B3EB
+P 9700 4300
+F 0 "J8" H 9780 4292 50  0000 L CNN
+F 1 "Left Motor JST" H 9780 4201 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 9700 4300 50  0001 C CNN
+F 3 "~" H 9700 4300 50  0001 C CNN
+	1    9700 4300
+	1    0    0    -1  
+$EndComp
+Text GLabel 9200 4400 0    50   Input ~ 0
+MOTOR_OUT_LEFT_A
+Text GLabel 9200 4300 0    50   Input ~ 0
+MOTOR_OUT_LEFT_B
+Text GLabel 9150 3650 0    50   Input ~ 0
+MOTOR_OUT_RIGHT_A
+Text GLabel 9150 3750 0    50   Input ~ 0
+MOTOR_OUT_RIGHT_B
+NoConn ~ 3800 3900
+NoConn ~ 3800 3800
+NoConn ~ 2500 3300
+NoConn ~ 2900 1700
+NoConn ~ 2900 1600
+$Comp
+L power:GNDD #PWR0102
+U 1 1 5FE8E4C6
+P 9000 1900
+F 0 "#PWR0102" H 9000 1650 50  0001 C CNN
+F 1 "GNDD" H 9004 1745 50  0000 C CNN
+F 2 "" H 9000 1900 50  0001 C CNN
+F 3 "" H 9000 1900 50  0001 C CNN
+	1    9000 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR0103
+U 1 1 5FE8EF15
+P 6750 3050
+F 0 "#PWR0103" H 6750 2800 50  0001 C CNN
+F 1 "GNDD" H 6754 2895 50  0000 C CNN
+F 2 "" H 6750 3050 50  0001 C CNN
+F 3 "" H 6750 3050 50  0001 C CNN
+	1    6750 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR0104
+U 1 1 5FE8F3E7
+P 2450 1100
+F 0 "#PWR0104" H 2450 850 50  0001 C CNN
+F 1 "GNDD" H 2454 945 50  0000 C CNN
+F 2 "" H 2450 1100 50  0001 C CNN
+F 3 "" H 2450 1100 50  0001 C CNN
+	1    2450 1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDD #PWR0105
+U 1 1 5FE91274
+P 4250 3050
+F 0 "#PWR0105" H 4250 2800 50  0001 C CNN
+F 1 "GNDD" H 4254 2895 50  0000 C CNN
+F 2 "" H 4250 3050 50  0001 C CNN
+F 3 "" H 4250 3050 50  0001 C CNN
+	1    4250 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDD #PWR0106
+U 1 1 5FE91553
+P 2100 3000
+F 0 "#PWR0106" H 2100 2750 50  0001 C CNN
+F 1 "GNDD" H 2104 2845 50  0000 C CNN
+F 2 "" H 2100 3000 50  0001 C CNN
+F 3 "" H 2100 3000 50  0001 C CNN
+	1    2100 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 5FE91DD2
+P 6250 2150
+F 0 "#PWR0107" H 6250 2000 50  0001 C CNN
+F 1 "+5V" H 6265 2323 50  0000 C CNN
+F 2 "" H 6250 2150 50  0001 C CNN
+F 3 "" H 6250 2150 50  0001 C CNN
+	1    6250 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0108
+U 1 1 5FE922D0
+P 6600 2150
+F 0 "#PWR0108" H 6600 2000 50  0001 C CNN
+F 1 "+BATT" H 6615 2323 50  0000 C CNN
+F 2 "" H 6600 2150 50  0001 C CNN
+F 3 "" H 6600 2150 50  0001 C CNN
+	1    6600 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR0109
+U 1 1 5FE931DC
+P 9000 3100
+F 0 "#PWR0109" H 9000 2850 50  0001 C CNN
+F 1 "GNDD" H 9004 2945 50  0000 C CNN
+F 2 "" H 9000 3100 50  0001 C CNN
+F 3 "" H 9000 3100 50  0001 C CNN
+	1    9000 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5FE9E286
+P 9000 1650
+F 0 "#FLG0101" H 9000 1725 50  0001 C CNN
+F 1 "PWR_FLAG" V 9000 1777 50  0001 L CNN
+F 2 "" H 9000 1650 50  0001 C CNN
+F 3 "~" H 9000 1650 50  0001 C CNN
+	1    9000 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FE9ECCF
+P 9000 1750
+F 0 "#FLG0102" H 9000 1825 50  0001 C CNN
+F 1 "PWR_FLAG" V 9000 1877 50  0001 L CNN
+F 2 "" H 9000 1750 50  0001 C CNN
+F 3 "~" H 9000 1750 50  0001 C CNN
+	1    9000 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5FEA1B9A
+P 6250 2900
+F 0 "#FLG0103" H 6250 2975 50  0001 C CNN
+F 1 "PWR_FLAG" V 6250 3027 50  0001 L CNN
+F 2 "" H 6250 2900 50  0001 C CNN
+F 3 "~" H 6250 2900 50  0001 C CNN
+	1    6250 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+BATT #PWR0101
+U 1 1 5FEA2C8E
+P 9000 1500
+F 0 "#PWR0101" H 9000 1350 50  0001 C CNN
+F 1 "+BATT" H 9015 1673 50  0000 C CNN
+F 2 "" H 9000 1500 50  0001 C CNN
+F 3 "" H 9000 1500 50  0001 C CNN
+	1    9000 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 2150 6600 2600
+Wire Wire Line
+	6600 2600 7200 2600
+Connection ~ 6250 2900
+Wire Wire Line
+	6250 2150 6250 2900
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5FEB5264
+P 2000 5300
+F 0 "H1" H 2100 5349 50  0000 L CNN
+F 1 "MountingHole_Pad" H 2100 5258 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 2000 5300 50  0001 C CNN
+F 3 "~" H 2000 5300 50  0001 C CNN
+	1    2000 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5FEB59A4
+P 2950 5300
+F 0 "H2" H 3050 5349 50  0000 L CNN
+F 1 "MountingHole_Pad" H 3050 5258 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 2950 5300 50  0001 C CNN
+F 3 "~" H 2950 5300 50  0001 C CNN
+	1    2950 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5FEB6A2D
+P 3850 5300
+F 0 "H3" H 3950 5349 50  0000 L CNN
+F 1 "MountingHole_Pad" H 3950 5258 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 3850 5300 50  0001 C CNN
+F 3 "~" H 3850 5300 50  0001 C CNN
+	1    3850 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 5FEB6F3D
+P 4750 5300
+F 0 "H4" H 4850 5349 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4850 5258 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 4750 5300 50  0001 C CNN
+F 3 "~" H 4750 5300 50  0001 C CNN
+	1    4750 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR0110
+U 1 1 5FEB7576
+P 2000 5700
+F 0 "#PWR0110" H 2000 5450 50  0001 C CNN
+F 1 "GNDD" H 2004 5545 50  0000 C CNN
+F 2 "" H 2000 5700 50  0001 C CNN
+F 3 "" H 2000 5700 50  0001 C CNN
+	1    2000 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 5400 2000 5550
+Wire Wire Line
+	2000 5550 2950 5550
+Wire Wire Line
+	2950 5550 2950 5400
+Connection ~ 2000 5550
+Wire Wire Line
+	2000 5550 2000 5700
+Wire Wire Line
+	2950 5550 3850 5550
+Wire Wire Line
+	3850 5550 3850 5400
+Connection ~ 2950 5550
+Wire Wire Line
+	3850 5550 4750 5550
+Wire Wire Line
+	4750 5550 4750 5400
+Connection ~ 3850 5550
+Wire Wire Line
+	9200 4400 9500 4400
+Wire Wire Line
+	9500 4300 9200 4300
+Wire Wire Line
+	9150 3750 9500 3750
+Wire Wire Line
+	9500 3650 9150 3650
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 5FE764C8
+P 9700 2900
+F 0 "J6" H 9618 2575 50  0000 C CNN
+F 1 "Cape Power" H 9618 2666 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 9700 2900 50  0001 C CNN
+F 3 "~" H 9700 2900 50  0001 C CNN
+	1    9700 2900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9000 2800 9500 2800
+Wire Wire Line
+	9000 2900 9500 2900
+Connection ~ 9000 1650
+Connection ~ 9000 1750
+Wire Wire Line
+	9000 1750 9500 1750
+Wire Wire Line
+	9000 1650 9500 1650
+Wire Wire Line
+	2450 1400 2900 1400
+Wire Wire Line
+	2900 1500 2450 1500
+$EndSCHEMATC
